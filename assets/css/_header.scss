@@ -1,0 +1,38 @@
+header {
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  .container {
+    margin: 0 auto;
+    padding: 50px;
+    background-color: black;
+  }
+}
+img {
+  max-width: 100%;
+}
+
+#__nuxt {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+  }
+  .music {
+    flex: 1 0 auto;
+    background-image: url("/assets/img/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    animation: animBg 25s linear infinite;
+
+    @keyframes animBg {
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+
+  }
+}
