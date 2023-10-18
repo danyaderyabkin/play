@@ -27,7 +27,6 @@ body {
     margin: 0;
     padding: .5em 1.5em .5em;
 
-
     &:hover {
       color: #959595;
       background-color: transparent;
@@ -42,6 +41,11 @@ body {
       color: inherit;
       background-color: transparent;
       outline: 0;
+
+      svg {
+        width: 85px;
+        height: 85px;
+      }
     }
   }
 
@@ -90,7 +94,7 @@ body {
   }
 
   .music {
-    padding: 3em 0;
+    padding: 0 0 275px;
 
     .music__list {
       display: flex;
@@ -133,6 +137,7 @@ body {
             border-radius: .5em;
             min-height: 200px;
             object-fit: cover;
+            animation: none;
           }
         }
 
@@ -146,6 +151,10 @@ body {
     padding: 2em 0 .25em;
     background-color: #1d1d1d;
     color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 
     .footer__container {
       display: flex;
@@ -156,6 +165,7 @@ body {
       .footer__wrap {
         display: flex;
         align-items: center;
+        justify-content: center;
         .btn-play svg{
           width: 100px;
           height: 100px;
