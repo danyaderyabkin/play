@@ -5,10 +5,7 @@
     <figure>
       <img :src="img" alt="">
     </figure>
-    <audio-player :audio-list="songUrl"/>
-
-    <PlayButton @click="play(songUrl),footerPlay(), paused = !paused" v-if="paused" />
-    <PauseButton @click="pause(), paused = !paused" v-else />
+    <audio-player />
   </li>
 </template>
 <script>
@@ -18,27 +15,7 @@ export default {
     return {
       title: '',
       paused: true,
-      player: new Audio(),
     }
   },
-  methods: {
-    play(hrefSong) {
-      if (this.player.src) {
-        this.player.play()
-      }else {
-        this.player.src = hrefSong
-        this.player.play()
-      }
-    },
-    pause() {
-      if(this.player.play()) {
-        this.player.pause()
-      }
-    },
-    footerPlay() {
-      this.$emit('songed', this.name)
-      this.$emit('art', this.artistName)
-    },
-  }
 }
 </script>
