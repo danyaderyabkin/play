@@ -16,7 +16,6 @@
       <ul class="music__list">
         <MusicItem v-for="song of spotySongs" :key="song.id" v-on:songed="songed" v-on:art="songedName" :song-url="song.preview_url" :name="song.name" :artist-name="song.artists[0].name" :img="song.album.images[0].url" />
       </ul>
-
     </div>
     <footer class="footer">
       <div class="container footer__container">
@@ -88,7 +87,6 @@
 </template>
 <script>
 import axios from "axios";
-
 export default {
   data() {
     return {

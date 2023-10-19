@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     public: {
       secret: process.env.PRIVATE_SECRET_TOKEN,
       publicId: process.env.PUBLIC_USER_ID
-    }
+    },
+    plugins: ['@liripeng/vue-audio-player']
   }
 });

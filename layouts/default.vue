@@ -11,7 +11,6 @@
   <main>
     <NuxtPage></NuxtPage>
   </main>
-
 </template>
 <style scoped lang="scss">
 .navbar-brand {

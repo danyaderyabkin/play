@@ -5,6 +5,8 @@
     <figure>
       <img :src="img" alt="">
     </figure>
+    <audio-player :audio-list="songUrl"/>
+
     <PlayButton @click="play(songUrl),footerPlay(), paused = !paused" v-if="paused" />
     <PauseButton @click="pause(), paused = !paused" v-else />
   </li>
@@ -14,8 +16,9 @@ export default {
   props: ['songUrl', 'name', 'artistName', 'img', 'songed', 'art'],
   data() {
     return {
+      title: '',
       paused: true,
-      player: new Audio()
+      player: new Audio(),
     }
   },
   methods: {
@@ -35,7 +38,7 @@ export default {
     footerPlay() {
       this.$emit('songed', this.name)
       this.$emit('art', this.artistName)
-    }
+    },
   }
 }
 </script>
