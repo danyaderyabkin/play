@@ -10,7 +10,7 @@
 </template>
 <style scoped>
 svg {
-  width: 75px;
-  height: 75px;
+  width: 50px;
+  height: 50px;
 }
 </style>
